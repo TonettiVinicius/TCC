@@ -1,0 +1,99 @@
+/* user-dashboard.css - Estilos para funcionalidades de usuários no dashboard, fiel a style_logado.css */
+/* Melhoria: Mais responsividade, transições, acessibilidade, consistência com variáveis */
+
+.user-settings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px; /* Aumentado para melhor espaçamento */
+}
+
+.user-settings-card {
+    background-color: white;
+    border-radius: 12px; /* Mais arredondado */
+    box-shadow: var(--shadow);
+    padding: 30px; /* Mais espaço */
+    transition: box-shadow 0.3s ease;
+}
+
+.user-settings-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.user-settings-option {
+    margin-bottom: 24px;
+}
+
+.user-settings-option label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.user-settings-option input,
+.user-settings-option select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: var(--transition), box-shadow 0.3s ease;
+}
+
+.user-settings-option input:focus,
+.user-settings-option select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+    outline: none;
+}
+
+.user-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: var(--transition), transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.user-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.user-btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.user-btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.user-error {
+    color: red;
+    margin-bottom: 12px;
+}
+
+.user-success {
+    color: green;
+    margin-bottom: 12px;
+}
+
+/* Responsividade aprimorada */
+@media (max-width: 768px) {
+    .user-settings-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .user-settings-card {
+        padding: 20px;
+    }
+}

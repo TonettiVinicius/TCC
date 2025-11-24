@@ -1,0 +1,125 @@
+/* provas.css - Estilos para funcionalidades de provas no dashboard */
+/* Melhoria: Consistência com tema, transições, responsividade aprimorada, tabelas mais legíveis */
+
+.prova-form-container,
+.prova-list-container {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 35px; /* Mais espaço */
+    margin: 24px 0;
+    transition: box-shadow 0.3s ease;
+}
+
+.prova-form-container:hover,
+.prova-list-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.prova-form-container h2,
+.prova-list-container h2 {
+    color: var(--primary-color);
+    margin-bottom: 24px;
+    font-size: 1.8em;
+}
+
+.prova-input-group {
+    margin-bottom: 24px;
+}
+
+.prova-input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.prova-input-group input,
+.prova-input-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: var(--transition), box-shadow 0.3s ease;
+}
+
+.prova-input-group input:focus,
+.prova-input-group textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+    outline: none;
+}
+
+.prova-btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition), transform 0.2s ease;
+    margin-bottom: 12px;
+}
+
+.prova-btn:hover {
+    background-color: var(--secondary-color);
+    box-shadow: var(--shadow);
+    transform: translateY(-2px);
+}
+
+.prova-info {
+    color: var(--text-light);
+    font-style: italic;
+    margin-bottom: 24px;
+}
+
+.prova-table {
+    width: 100%;
+    border-collapse: separate; /* Melhor para bordas arredondadas */
+    border-spacing: 0;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra leve na tabela */
+}
+
+.prova-table th,
+.prova-table td {
+    border: 1px solid #ddd;
+    padding: 10px 12px; /* Mais padding para legibilidade */
+    text-align: left;
+}
+
+.prova-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+.prova-table tr:hover {
+    background-color: rgba(67, 97, 238, 0.05); /* Hover na linha para interatividade */
+}
+
+@media (max-width: 768px) {
+    .prova-form-container,
+    .prova-list-container {
+        padding: 25px;
+    }
+
+    .prova-table {
+        font-size: 0.9em;
+    }
+
+    .prova-table th,
+    .prova-table td {
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .prova-table {
+        display: block; /* Converte tabela em bloco para mobile */
+        overflow-x: auto; /* Scroll horizontal se necessário */
+    }
+}

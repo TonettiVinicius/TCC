@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../../src/css/usuario.css">
+</head>
+<body>
+    <div class="auth-container"> 
+        <div class="auth-form">
+        <form action="../../back_end/validacoes/autentica.php" method="post">
+                <div class="auth-title">
+                <h3>Login</h3>
+            </div>
+
+            <!--Recebe login ou email do usuario-->
+            <div class="auth-input-box">            
+                <label for="login">Login ou Email:</label>
+                <input type="text" name="login" required>
+            </div>
+
+            <!--Recebe a senha do usuario-->
+            <div class="auth-input-box">        
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" required>
+            </div>
+
+            <div class="auth-link">        
+                <p>Não tem conta? <a href="cadastrar.html"> Cadastre-se</a></p>
+            </div>
+
+            <input type="submit" value="Enviar" class="auth-btn">
+            </form>    
+        </div>         
+    </div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+/* Estilos específicos para seção de Pastas, sem sobrepor globais */
+
+/* Melhoria: Uso de variáveis CSS para consistência, maior responsividade, transições suaves, acessibilidade melhorada (contraste, focus states) */
+
+/* Container para forms de pasta */
+.pasta-form-container {
+    background: white;
+    border-radius: 12px; /* Aumentado para visual mais moderno */
+    padding: 30px; /* Aumentado para mais espaço interno */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra mais suave e profunda */
+    margin-bottom: 24px;
+    transition: box-shadow 0.3s ease; /* Transição para hover */
+}
+
+.pasta-form-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Efeito hover para interatividade */
+}
+
+.pasta-form-card h2 {
+    color: #3a0ca3;
+    margin-bottom: 24px;
+    font-size: 1.6rem; /* Ajustado para melhor hierarquia */
+    text-align: center; /* Centralizado para simetria */
+}
+
+.pasta-form-card .input-group {
+    margin-bottom: 18px;
+}
+
+.pasta-form-card label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600; /* Mais negrito para legibilidade */
+    color: #333; /* Cor escura para contraste */
+}
+
+.pasta-form-card input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc; /* Borda mais suave */
+    border-radius: 6px; /* Arredondado para modernidade */
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pasta-form-card input:focus {
+    border-color: #3a0ca3; /* Cor de foco consistente com tema */
+    box-shadow: 0 0 0 3px rgba(58, 12, 163, 0.1); /* Halo de foco para acessibilidade */
+    outline: none;
+}
+
+/* Visualização de pasta */
+.pasta-view-container {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.pasta-view-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.pasta-view-container h3 {
+    color: #3a0ca3;
+    margin-bottom: 18px;
+    font-size: 1.4rem;
+}
+
+.questions-in-pasta .question-card {
+    margin-bottom: 18px;
+    border-radius: 8px; /* Adicionado para consistência */
+    padding: 15px; /* Espaçamento interno */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra leve */
+    transition: transform 0.2s ease;
+}
+
+.questions-in-pasta .question-card:hover {
+    transform: translateY(-2px); /* Elevação no hover */
+}
+
+.pasta-view-container form {
+    margin-top: 24px;
+}
+
+.pasta-view-container select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.pasta-view-container select:focus {
+    border-color: #3a0ca3;
+    box-shadow: 0 0 0 3px rgba(58, 12, 163, 0.1);
+    outline: none;
+}
+
+/* Ações em cards de pasta */
+.folder-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.folder-actions button {
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+/* Responsividade aprimorada */
+@media (max-width: 768px) {
+    .pasta-form-container,
+    .pasta-view-container {
+        padding: 20px;
+    }
+
+    .pasta-form-card h2,
+    .pasta-view-container h3 {
+        font-size: 1.4rem; /* Ajuste para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .folder-actions {
+        flex-direction: column; /* Empilha ações em telas muito pequenas */
+        gap: 8px;
+    }
+}

@@ -1,0 +1,118 @@
+/* Variáveis iguais ao style_logado */
+:root {
+    --primary-color: #4361ee;
+    --secondary-color: #3a0ca3;
+    --accent-color: #7209b7;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --success-color: #4cc9f0;
+    --text-color: #333;
+    --text-light: #6c757d;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Sem estilos globais para body ou *, para evitar conflitos */
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-color);
+    padding: 20px;
+}
+
+.auth-form {
+    background-color: white;
+    padding: 35px; /* Mais espaço */
+    border-radius: 12px; /* Mais arredondado */
+    box-shadow: var(--shadow);
+    max-width: 400px;
+    width: 100%;
+    transition: box-shadow 0.3s ease;
+}
+
+.auth-form:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.auth-title {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 24px;
+    font-size: 1.8em;
+}
+
+.auth-input-box {
+    margin-bottom: 24px;
+}
+
+.auth-input-box label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.auth-input-box input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: var(--transition), box-shadow 0.3s ease;
+}
+
+.auth-input-box input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+    outline: none;
+}
+
+.auth-btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition), transform 0.2s ease;
+}
+
+.auth-btn:hover {
+    background-color: var(--secondary-color);
+    box-shadow: var(--shadow);
+    transform: translateY(-2px);
+}
+
+.auth-link {
+    text-align: center;
+    margin-top: 18px;
+    color: var(--text-light);
+}
+
+.auth-link a {
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.auth-link a:hover {
+    color: var(--secondary-color);
+}
+
+/* Responsividade aprimorada */
+@media (max-width: 768px) {
+    .auth-form {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-title {
+        font-size: 1.6em;
+    }
+}
